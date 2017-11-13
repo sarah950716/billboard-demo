@@ -5,7 +5,6 @@ window.onload = () => {
 const promiseGenerator = (filename) => {
   return new Promise((resolve, reject) => {
     $.getJSON("data/"+filename, (data) => {
-      console.log("data/"+filename, data);
       resolve(data);
     });
   }).catch((err) => {
